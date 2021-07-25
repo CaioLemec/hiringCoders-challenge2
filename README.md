@@ -38,10 +38,10 @@ Application created to complete the second challenge in [Hiring Coders](https://
 
 ## :nail_care: Layout
 <p align="center">
-<img src="./public/images/Desktop.gif" width="65%"/>
+<img src="./public/images/Desktop.gif" width="90%"/>
 <p align="center">
-<img src="./public/images/tablet.gif" width="40%"/>
-<img src="./public/images/mobile.gif" width="25%"/>
+<img src="./public/images/tablet.gif" width="55%"/>
+<img src="./public/images/mobile.gif" width="35%"/>
 </p>
 <h3 align="center">You can also check <a href="https://hiring-coders-challenge2.vercel.app/">Deploy</a>.</h3>
 <br>
