@@ -1,23 +1,29 @@
-import { Flex, FormControl, FormLabel, Input, VStack, Button } from "@chakra-ui/react"
+import {
+    Flex,
+    FormControl,
+    FormLabel,
+    Input,
+    VStack,
+    Button
+} from "@chakra-ui/react";
+
+import { useContext } from "react";
+
 import React, { useState } from "react";
+import { ProductInfoContext } from "../../contexts/ProductInfoContext";
+
 
 export function ProductsInput() {
-    const [productName, setProductName] = useState('');
-    const [productPrice, setProductPrice] = useState('');
-    const [productInfo, setProductInfo] = useState([]);
-
-    function addingProductContact(userArrayInfo) {
-        const newProductsInfo = [...productInfo, userArrayInfo];
-        setProductInfo(newProductsInfo)
-        localStorage.setItem('PRODUCT_INFO', JSON.stringify(newProductsInfo));
-    }
+    const [productName, setProductName] = useState("");
+    const [productPrice, setProductPrice] = useState("");
+    const { addProductInfoItem } = useContext(ProductInfoContext);
 
     async function handleUserContact() {
-        let userArrayInfo = new Array({
+        const userFormData = {
             name: productName,
             price: productPrice
-        });
-        addingProductContact(userArrayInfo);
+        };
+        addProductInfoItem(userFormData);
     }
 
     return (
@@ -26,30 +32,30 @@ export function ProductsInput() {
                 <FormControl id="first-name">
                     <FormLabel>Product Name</FormLabel>
                     <Input
-                        onChange={event => setProductName(event.target.value)}
+                        onChange={(event) => setProductName(event.target.value)}
                         value={productName}
                         placeholder="name"
                         borderColor="pink.main"
                         _focus={{
                             border: "2px",
-                            borderColor: "pink.main",
+                            borderColor: "pink.main"
                         }}
-                        _hover={{ transform: "scale(0.95)", }}
+                        _hover={{ transform: "scale(0.95)" }}
                     />
                 </FormControl>
                 <FormControl id="email">
                     <FormLabel>Product Price</FormLabel>
                     <Input
-                        onChange={event => setProductPrice(event.target.value)}
+                        onChange={(event) => setProductPrice(event.target.value)}
                         value={productPrice}
                         type="number"
                         placeholder="usd"
                         borderColor="pink.main"
                         _focus={{
                             border: "2px",
-                            borderColor: "pink.main",
+                            borderColor: "pink.main"
                         }}
-                        _hover={{ transform: "scale(0.95)", }}
+                        _hover={{ transform: "scale(0.95)" }}
                         mb="4"
                     />
                 </FormControl>
@@ -64,13 +70,13 @@ export function ProductsInput() {
                     color="yellow.main"
                     _hover={{ opacity: "0.8" }}
                     _active={{
-                        transform: "scale(0.90)",
+                        transform: "scale(0.90)"
                     }}
                     _focus={{
-                        border: "none",
+                        border: "none"
                     }}
                 >
-                    Contact us
+                    Register Product
                 </Button>
             </VStack>
         </Flex>
