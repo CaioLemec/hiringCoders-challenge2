@@ -9,24 +9,24 @@ export function ProductsInput() {
     function addingProductContact(userArrayInfo) {
         const newProductsInfo = [...productInfo, userArrayInfo];
         setProductInfo(newProductsInfo)
-        localStorage.setItem('PRODUCT_INFO', JSON.stringify(newProductsInfo));   
+        localStorage.setItem('PRODUCT_INFO', JSON.stringify(newProductsInfo));
     }
 
     async function handleUserContact() {
         let userArrayInfo = new Array({
-            name: productName, 
-            price: productPrice 
-          });   
-          addingProductContact(userArrayInfo);
+            name: productName,
+            price: productPrice
+        });
+        addingProductContact(userArrayInfo);
     }
-    
+
     return (
         <Flex>
             <VStack>
                 <FormControl id="first-name">
                     <FormLabel>Product Name</FormLabel>
                     <Input
-                        onChange={event => setProductName(event.target.value)} 
+                        onChange={event => setProductName(event.target.value)}
                         value={productName}
                         placeholder="name"
                         borderColor="pink.main"
@@ -40,7 +40,7 @@ export function ProductsInput() {
                 <FormControl id="email">
                     <FormLabel>Product Price</FormLabel>
                     <Input
-                        onChange={event => setProductPrice(event.target.value)} 
+                        onChange={event => setProductPrice(event.target.value)}
                         value={productPrice}
                         type="number"
                         placeholder="usd"
@@ -64,10 +64,10 @@ export function ProductsInput() {
                     color="yellow.main"
                     _hover={{ opacity: "0.8" }}
                     _active={{
-                    transform: "scale(0.90)",
+                        transform: "scale(0.90)",
                     }}
                     _focus={{
-                    border: "none",
+                        border: "none",
                     }}
                 >
                     Contact us

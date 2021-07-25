@@ -14,15 +14,15 @@ export function SignUpButton(props) {
 
   async function handleUserRegister() {
     const userArrayInfo = new Array({
-      name: userName, 
-      lastName: userLastName, 
-      email: userEmail, 
+      name: userName,
+      lastName: userLastName,
+      email: userEmail,
       password: userPassword
     });
-    localStorage.setItem('USER_INFO', JSON.stringify(userArrayInfo));   
+    localStorage.setItem('USER_INFO', JSON.stringify(userArrayInfo));
     router.push('/products')
   }
-  
+
   return (
     <>
       <Button
@@ -59,7 +59,7 @@ export function SignUpButton(props) {
             <FormControl>
               <FormLabel textColor="yellow.main">First name</FormLabel>
               <Input
-                onChange={event => setUserName(event.target.value)} 
+                onChange={event => setUserName(event.target.value)}
                 value={userName}
                 ref={initialRef}
                 placeholder="First name"
@@ -75,7 +75,7 @@ export function SignUpButton(props) {
             <FormControl mt={4}>
               <FormLabel textColor="yellow.main">Last name</FormLabel>
               <Input
-                onChange={event => setUserLastName(event.target.value)} 
+                onChange={event => setUserLastName(event.target.value)}
                 value={userLastName}
                 placeholder="Last name"
                 borderColor="pink.main"
@@ -90,7 +90,7 @@ export function SignUpButton(props) {
             <FormControl mt={4}>
               <FormLabel textColor="yellow.main">E-mail adress</FormLabel>
               <Input
-                onChange={event => setUserEmail(event.target.value)} 
+                onChange={event => setUserEmail(event.target.value)}
                 value={userEmail}
                 placeholder="E-mail adress"
                 borderColor="pink.main"
@@ -105,7 +105,7 @@ export function SignUpButton(props) {
             <FormControl mt={4}>
               <FormLabel textColor="yellow.main">Password</FormLabel>
               <Input
-                onChange={event => setUserPassword(event.target.value)} 
+                onChange={event => setUserPassword(event.target.value)}
                 value={userPassword}
                 placeholder="Password"
                 borderColor="pink.main"

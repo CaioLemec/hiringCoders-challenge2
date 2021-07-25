@@ -7,25 +7,25 @@ export function ContactInput() {
     const [contactEmail, setContactEmail] = useState('');
     const [contactMessage, setContactMessage] = useState('');
     const router = useRouter()
-  
+
     async function handleUserContact() {
-      const contactArrayInfo = new Array({
-        name: contactName, 
-        email: contactEmail, 
-        message: contactMessage
-      });
-      localStorage.setItem('CONTACT_INFO', JSON.stringify(contactArrayInfo));   
-      router.push('/')
-      alert('Your email was sent sucefully. Wait our answer at your e-mail')
+        const contactArrayInfo = new Array({
+            name: contactName,
+            email: contactEmail,
+            message: contactMessage
+        });
+        localStorage.setItem('CONTACT_INFO', JSON.stringify(contactArrayInfo));
+        router.push('/')
+        alert('Your email was sent sucefully. Wait our answer at your e-mail')
     }
-    
+
     return (
         <Flex>
             <VStack>
                 <FormControl id="first-name">
                     <FormLabel>First name</FormLabel>
                     <Input
-                        onChange={event => setContactName(event.target.value)} 
+                        onChange={event => setContactName(event.target.value)}
                         value={contactName}
                         placeholder="Name"
                         borderColor="pink.main"
@@ -39,7 +39,7 @@ export function ContactInput() {
                 <FormControl id="email">
                     <FormLabel>Email address</FormLabel>
                     <Input
-                        onChange={event => setContactEmail(event.target.value)} 
+                        onChange={event => setContactEmail(event.target.value)}
                         value={contactEmail}
                         type="email"
                         placeholder="E-mail"
@@ -54,7 +54,7 @@ export function ContactInput() {
                 <FormControl id="content">
                     <FormLabel>Menssage</FormLabel>
                     <Textarea
-                        onChange={event => setContactMessage(event.target.value)} 
+                        onChange={event => setContactMessage(event.target.value)}
                         value={contactMessage}
                         placeholder="We are waiting for your contact."
                         borderColor="pink.main"
@@ -76,10 +76,10 @@ export function ContactInput() {
                     color="yellow.main"
                     _hover={{ opacity: "0.8" }}
                     _active={{
-                    transform: "scale(0.90)",
+                        transform: "scale(0.90)",
                     }}
                     _focus={{
-                    border: "none",
+                        border: "none",
                     }}
                 >
                     Contact us

@@ -6,8 +6,8 @@ import ParticlesBackground from "../components/PageHome/Particles";
 import { ProductsInput } from "../components/PageProducts";
 
 export default function Contact() {
-  const getUserName =  JSON.parse(localStorage.getItem("USER_INFO"));
-  const getProductInfos =  JSON.parse(localStorage.getItem("PRODUCT_INFO"));
+  const getUserName = JSON.parse(localStorage.getItem("USER_INFO"));
+  const getProductInfos = JSON.parse(localStorage.getItem("PRODUCT_INFO"));
 
   return (
     <>
@@ -29,13 +29,13 @@ export default function Contact() {
           <Text position="absolute" top="255" left="0" right="0" textAlign="center" fontSize="32">Hello, {getUserName[0].name} {getUserName[0].lastName}  👋</Text>
           <Flex flexDirection="column" w="100%" h="100%" align="center" justify="center">
             <ProductsInput />
-          {getProductInfos && (
-            getProductInfos.map(getProductInfo => (
-              <Flex w="100%" bg="red">
-                <Text>Afsf</Text>
-              </Flex>
-            ))
-          )}
+            {getProductInfos && (
+              getProductInfos.map(getProductInfo => (
+                <Flex w="100%" bg="red">
+                  <Text>Afsf</Text>
+                </Flex>
+              ))
+            )}
           </Flex>
         </Flex>
       </Flex>
