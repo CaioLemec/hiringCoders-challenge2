@@ -1,6 +1,6 @@
 import { Menu, MenuButton, MenuList, Icon, Text, Link, MenuItem, IconButton, VStack, useMediaQuery } from "@chakra-ui/react"
 import React from "react";
-import { RiHome2Fill, RiMenuFill, RiUserSmileFill, RiParentFill } from 'react-icons/ri'
+import { RiHome2Fill, RiMenuFill, RiUserSmileFill } from 'react-icons/ri'
 
 interface MobileMenuProps {
     showMobileMenu?: boolean;
