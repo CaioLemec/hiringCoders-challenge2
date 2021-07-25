@@ -40,8 +40,8 @@ Application created to complete the second challenge in [Hiring Coders](https://
 <p align="center">
 <img src="./public/images/Desktop.gif" width="73%"/>
 <p align="center">
-<img src="./public/images/tablet.gif" height="500px" width="43%"/>
-<img src="./public/images/mobile.gif" height="500px" width="30%"/>
+<img src="./public/images/tablet.gif" height="500px" width="48%"/>
+<img src="./public/images/mobile.gif" height="500px" width="25%"/>
 </p>
 <h3 align="center">You can also check <a href="https://hiring-coders-challenge2.vercel.app/">Deploy</a>.</h3>
 <br>
