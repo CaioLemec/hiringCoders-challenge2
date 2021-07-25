@@ -7,8 +7,6 @@ import { ProductList } from "../components/PageProducts/ProductList";
 import { ProductInfoContextProvider } from "../contexts/ProductInfoContext";
 
 export default function Contact() {
-  const getUserName = JSON.parse(localStorage.getItem("USER_INFO"));
-  const getProductInfos = JSON.parse(localStorage.getItem("PRODUCT_INFO"));
 
   return (
     <>
@@ -18,14 +16,13 @@ export default function Contact() {
       <Header />
       <Flex w="100%" h="90vh" align="center" justify="center">
         <Flex w="90%" h="90%" boxShadow="2xl" borderRadius={30} bg="rgba(255, 255, 255, 0.1)" >
-          <Text position="absolute" top="205" left="0" right="0" textAlign="center" fontSize="32">Hello, {getUserName[0].name} {getUserName[0].lastName}  👋</Text>
           <Flex flexDirection="column" w="100%" h="100%" align="center" justify="center">
-          <ProductInfoContextProvider>
-            <ProductsInput />
-            <Grid mt={8} templateColumns="repeat(3, 1fr)" gap={6}>
-            <ProductList />
-            </Grid>
-          </ProductInfoContextProvider>
+            <ProductInfoContextProvider>
+              <ProductsInput />
+              <Grid mt={8} templateColumns="repeat(3, 1fr)" gap={6}>
+                <ProductList />
+              </Grid>
+            </ProductInfoContextProvider>
           </Flex>
         </Flex>
       </Flex>
