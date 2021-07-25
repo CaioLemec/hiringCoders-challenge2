@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, SimpleGrid, Text } from "@chakra-ui/react";
+import { Flex, Grid} from "@chakra-ui/react";
 import Head from 'next/head';
 import React from "react";
 import { Header } from "../components/Header";
