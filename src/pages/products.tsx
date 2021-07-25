@@ -2,7 +2,6 @@ import { Box, Flex, Grid, SimpleGrid, Text } from "@chakra-ui/react";
 import Head from 'next/head';
 import React from "react";
 import { Header } from "../components/Header";
-import ParticlesBackground from "../components/PageHome/Particles";
 import { ProductsInput } from "../components/PageProducts";
 import { ProductList } from "../components/PageProducts/ProductList";
 import { ProductInfoContextProvider } from "../contexts/ProductInfoContext";
@@ -16,15 +15,6 @@ export default function Contact() {
       <Head>
         <title>Hiring Challenge | Products</title>
       </Head>
-      <Box
-        zIndex="-1"
-        position="fixed"
-        overflow="hidden"
-        w={5000}
-        h={5000}
-      >
-        <ParticlesBackground />
-      </Box>
       <Header />
       <Flex w="100%" h="90vh" align="center" justify="center">
         <Flex w="90%" h="90%" boxShadow="2xl" borderRadius={30} bg="rgba(255, 255, 255, 0.1)" >

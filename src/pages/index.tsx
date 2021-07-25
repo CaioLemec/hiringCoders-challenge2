@@ -3,7 +3,6 @@ import React from "react";
 import Head from 'next/head';
 import { Header } from "../components/Header";
 import { SignUpButton } from "../components/SignUpButton";
-import ParticlesBackground from "../components/PageHome/Particles";
 
 export default function Home() {
   const isMobileVersion = useBreakpointValue({
@@ -15,16 +14,6 @@ export default function Home() {
       <Head>
         <title>Hiring Challenge | Home</title>
       </Head>
-      <Box
-        zIndex="-1"
-        position="fixed"
-        overflow="hidden"
-        w={5000}
-        h={5000}
-        mx="auto"
-      >
-        <ParticlesBackground />
-      </Box>
       <Flex
         direction="column"
         h="100vh"
