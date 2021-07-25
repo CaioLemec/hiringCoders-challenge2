@@ -10,7 +10,7 @@
   <a href="#bookmark_tabs-license"><img src="https://img.shields.io/static/v1?label=&message=License&color=F7567C&style=for-the-badge&logo=LibreOffice"/></a>&nbsp;
 </p>
 <p align="center">
- <img alt="webapp mockup" src="./public/mockup.png" width="55%">
+ <img alt="webapp mockup" src="./public/images/mockup.png" width="55%">
 </p>
 
 <br>
@@ -38,8 +38,12 @@ Application created to complete the second challenge in [Hiring Coders](https://
 
 ## :nail_care: Layout
 <p align="center">
-<img src="./public/layout.gif" width="100%"/>
-<h3 align="center">You can also check <a href="https://hiring-coders-challenge.vercel.app">Deploy</a>.</h3>
+<img src="./public/images/Desktop.gif" width="53%"/>
+<p align="center">
+<img src="./public/images/tablet.gif" height="500px" width="33%"/>
+<img src="./public/images/mobile.gif" height="500px" width="20%"/>
+</p>
+<h3 align="center">You can also check <a href="https://hiring-coders-challenge2.vercel.app/">Deploy</a>.</h3>
 <br>
 <hr>
 
